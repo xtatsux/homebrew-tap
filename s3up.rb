@@ -5,20 +5,20 @@
 class S3up < Formula
   desc ""
   homepage ""
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xtatsux/s3up/releases/download/v0.4.0/s3up_Darwin_x86_64.tar.gz"
-      sha256 "6a46a2b34e68a34d6cd73fc83c1b6feeac06fc0aac6989ba6f2e368f04954aad"
+      url "https://github.com/xtatsux/s3up/releases/download/v0.5.0/s3up_Darwin_x86_64.tar.gz"
+      sha256 "47eda1885a796af557d34c9fcdac44e99d9447ef054d77bdb397d180302b04bf"
 
       def install
         bin.install "s3up"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xtatsux/s3up/releases/download/v0.4.0/s3up_Darwin_arm64.tar.gz"
-      sha256 "4beb61b9956110717ade0159b00ee130b6604a02632e64ec08af2d741202849c"
+      url "https://github.com/xtatsux/s3up/releases/download/v0.5.0/s3up_Darwin_arm64.tar.gz"
+      sha256 "cbcb5c76db0ffee69177621671e586da741c1a2f16dbb99d5886581657e713e1"
 
       def install
         bin.install "s3up"
@@ -29,8 +29,8 @@ class S3up < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/xtatsux/s3up/releases/download/v0.4.0/s3up_Linux_x86_64.tar.gz"
-        sha256 "63bc75a4f8f061e2779b02143c911a24883ca056b84835164b3aeb40f388c29e"
+        url "https://github.com/xtatsux/s3up/releases/download/v0.5.0/s3up_Linux_x86_64.tar.gz"
+        sha256 "7bfae661c2cbd05691b042cf23182d55d171d36cdd3603ef4d29093f30165e35"
 
         def install
           bin.install "s3up"
@@ -39,8 +39,8 @@ class S3up < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/xtatsux/s3up/releases/download/v0.4.0/s3up_Linux_arm64.tar.gz"
-        sha256 "1c1dc5be0e972e93e89036e7b37a78e2cf23ee3cd37ed716951734e5f4c91593"
+        url "https://github.com/xtatsux/s3up/releases/download/v0.5.0/s3up_Linux_arm64.tar.gz"
+        sha256 "30ac35549769fa589805eb7070d3590147bc8b24b605cdfe255ddd35abcec9f2"
 
         def install
           bin.install "s3up"
