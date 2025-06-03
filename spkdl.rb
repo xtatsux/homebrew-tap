@@ -7,20 +7,20 @@ class Spkdl < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/xtatsux/spkdl/releases/download/v0.1.0/spkdl_Darwin_arm64.tar.gz"
-      sha256 "579a20c0ce984e5363022720b0c7fac0ea5cf7ca68ca7da7e0fffd058b300a12"
+      sha256 "05bcc8d83269cc2e71cd1650ed598d590ae4215ff51a9d245532469894055e9c"
     else
       url "https://github.com/xtatsux/spkdl/releases/download/v0.1.0/spkdl_Darwin_x86_64.tar.gz"
-      sha256 "9614999ebf1d176f01c23b00517dafe94463e16f5d9e7c4fe3813e8fe0d75153"
+      sha256 "f2d0b9137a18b56facba1d855a5c443d8b9645919799aec1fbbe4908872a6987"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/xtatsux/spkdl/releases/download/v0.1.0/spkdl_Linux_arm64.tar.gz"
-      sha256 "8e18a509a8c6de894f267979fed05b14d15392e1b38f4c424ccd1b1c2e414c2f"
+      sha256 "8dea0cf8d4773686ad41d6171f34608d1de69f7a1864789a6bde5737101ed713"
     else
       url "https://github.com/xtatsux/spkdl/releases/download/v0.1.0/spkdl_Linux_x86_64.tar.gz"
-      sha256 "f297be0a8af62de188c94598dcc0b833fe406c9012bc3f44c5266146b5cceb2c"
+      sha256 "d99994d2c2479d598c3feacf4b573422f8d55685205831b6bc6c74df9f0397d7"
     end
   end
 
