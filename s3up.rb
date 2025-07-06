@@ -5,20 +5,20 @@
 class S3up < Formula
   desc ""
   homepage ""
-  version "0.5.1"
+  version "0.6.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xtatsux/s3up/releases/download/v0.5.1/s3up_Darwin_x86_64.tar.gz"
-      sha256 "49119beca312b7737413df638b43b27a0e4ccd3c1d62245c2158fc9e610c5f39"
+      url "https://github.com/xtatsux/s3up/releases/download/v0.6.0/s3up_Darwin_x86_64.tar.gz"
+      sha256 "90f495c31aba669fc5054df33a42ae3d1f53767881c578e5cd3b7bb245b72e1f"
 
       def install
         bin.install "s3up"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xtatsux/s3up/releases/download/v0.5.1/s3up_Darwin_arm64.tar.gz"
-      sha256 "1d1b861a9b461042cd556dd4705d4457642c88d165030ecdd30e5682dca9b064"
+      url "https://github.com/xtatsux/s3up/releases/download/v0.6.0/s3up_Darwin_arm64.tar.gz"
+      sha256 "0d0bddbd720da3740111a0aa8946ad65a7c9fcb3159c7943957d180e30f6a7c7"
 
       def install
         bin.install "s3up"
@@ -27,24 +27,18 @@ class S3up < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/xtatsux/s3up/releases/download/v0.5.1/s3up_Linux_x86_64.tar.gz"
-        sha256 "c82c7dd0b837f2ff1dee6e80f5faeb5a00eac9fcb1cd0534e3249949a3a52f05"
-
-        def install
-          bin.install "s3up"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/xtatsux/s3up/releases/download/v0.6.0/s3up_Linux_x86_64.tar.gz"
+      sha256 "d7ce7526f6f0b9e099818f6cfc8da38785794990206645ca6a97b4e2cb4c7e00"
+      def install
+        bin.install "s3up"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/xtatsux/s3up/releases/download/v0.5.1/s3up_Linux_arm64.tar.gz"
-        sha256 "6dcbbeb551b63deba76bf5483be73ac987e24a85f54376448783d87347d32af6"
-
-        def install
-          bin.install "s3up"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/xtatsux/s3up/releases/download/v0.6.0/s3up_Linux_arm64.tar.gz"
+      sha256 "a4406a4924936a776434e2c3f2fdeae71ed47f0b8c56b70442c5c0477cbd1461"
+      def install
+        bin.install "s3up"
       end
     end
   end
